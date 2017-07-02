@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../src/alertext.css">
+  <title>Alertext Demo</title>
+</head>
+<body>
+
+  <h1>Demo</h1>
+
+
+  <a alertext="Someting Primary">Primary</a><br>
+  <a alertext="Some information" alertext-type="warning">Info</a><br>
+  <a alertext="Some succesful" alertext-type="success">Success</a><br>
+  <a alertext="Something dangerous" alertext-type="danger">Danger</a><br>
+  <a alertext="Something unique" alertext-options='{"color":"green","background":"orange"}'>Custom</a>
+
+  <a alertext="Really long text for the alert. Not sure why. Need review. ">Run</a>
+
+
+  <script src="../src/alertext.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    alertext.init();
+    alertext.alert("Launched programatically", "info", "", 10000);
+  </script>
+</body>
+</html>
