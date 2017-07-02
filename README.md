@@ -28,7 +28,13 @@ Please include both alertext.js and alertext.css in your page before anything el
 
 ### HTML5 attribute
 ```html
-<a alertext="Some primary information to notify" alertext-type="danger" alertext-options='{"color":"green","background":"orange"}' alertext-delay='1000'>Some button</a>
+<a 
+alertext="Some primary information to notify"
+alertext-type="danger"
+alertext-options='{"color":"green","background":"orange"}'
+alertext-delay='1000'>
+Some button
+</a>
 
 <!-- Place this anywhere you load your scripts. -->
 <script>
