@@ -144,3 +144,10 @@ Alertext relies on a boilerplate CSS file for the most basic stylings.
 Alternatively, you can simply pass an object (with JS CSS modifier syntax) when calling alertext.
 If via HTML5, use the alertext-options data attribute.
 If via JS, use the pass the options as the third parameter.
+
+## Coming soon ://TODO
+
+1. Add callback functions via parameter
+2. Add custom classes via parameter
+3. Need help to convert to full ES6 mode 😎
+4. Reduce variable names to decrease size, but keep a 'readable version' 🔦
