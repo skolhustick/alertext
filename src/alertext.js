@@ -12,10 +12,15 @@
           var k = els[i].getAttribute('alertext');
           var l = els[i].getAttribute('alertext-type');
           var j = JSON.parse(els[i].getAttribute('alertext-options'));
+          var m = els[i].getAttribute('alertext-delay');
+
           if (l === null) {
             l = "primary";
           }
-          alertext.alert(k, l, j);
+          if (m === null || m == "") {
+            m = 1000;
+          }
+          alertext.alert(k, l, j, m);
         }
       })(i)
     };
@@ -43,6 +48,7 @@
       setTimeout(function(){
         alertext.container.removeChild(el);
       }, delay)
+      console.log(el);
     };
     return alertext;
   }

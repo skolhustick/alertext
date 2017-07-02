@@ -24,6 +24,34 @@ Please include both alertext.js and alertext.css in your page before anything el
 ```html
 <a alertext="Some primary information to notify">Some button</a><br>
 ```
+## In it's full form
+
+### HTML5 attribute
+```html
+<a alertext="Some primary information to notify" alertext-type="danger" alertext-options='{"color":"green","background":"orange"}' alertext-delay='1000'>Some button</a><br>
+
+<!-- Place this anywhere you load your scripts. -->
+<script>
+  alertext.init();
+</script>
+```
+### Via JS
+
+```html
+<script>
+  //alertext.alert(message, type, options(css), delay(before dissapear));
+  alertext.alert("Launched programatically", "info", '{"color":"green","background":"orange"}', 10000);
+</script>
+```
+
+### Skipping parameter
+
+```html
+<script>
+  //You can skip parameters by just leaving them undefined. Below, is an example of type and delay skipped:
+  alertext.alert("Launched programatically", undefined, '{"color":"green","background":"orange"}');
+</script>
+```
 
 ## Changing types
 
@@ -33,6 +61,8 @@ Alertext comes with the following types:
 3. warning
 4. info
 5. danger
+
+Primary is the default class.
 
 ### Using HTML data attribute
 
@@ -53,6 +83,6 @@ Please include both alertext.js and alertext.css in your page before anything el
 
 ```html
 <script>
-alertext.alert("Launched programatically", "info", "", 10000);
+  alertext.alert("Launched programatically", "danger");
 </script>
 ```
