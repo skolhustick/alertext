@@ -28,7 +28,7 @@ Please include both alertext.js and alertext.css in your page before anything el
 
 ### HTML5 attribute
 ```html
-<a alertext="Some primary information to notify" alertext-type="danger" alertext-options='{"color":"green","background":"orange"}' alertext-delay='1000'>Some button</a><br>
+<a alertext="Some primary information to notify" alertext-type="danger" alertext-options='{"color":"green","background":"orange"}' alertext-delay='1000'>Some button</a>
 
 <!-- Place this anywhere you load your scripts. -->
 <script>
@@ -66,11 +66,10 @@ Primary is the default class.
 
 ### Using HTML data attribute
 
-Please include both alertext.js and alertext.css in your page before anything else.
-
 ```html
 <!-- Using the danger type -->
-<a alertext="Something dangerous" alertext-type="danger">Danger</a><br>
+<a alertext="Something dangerous"
+alertext-type="danger">Danger</a><br>
 
 
 <!-- Place this anywhere you load your scripts. -->
