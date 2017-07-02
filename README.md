@@ -152,3 +152,5 @@ If via JS, use the pass the options as the third parameter.
 3. Need help to convert to full ES6 mode 😎
 4. Reduce variable names to decrease size, but keep a 'readable version' 🔦
 5. Add to readme how to use with animate CSS
+6. Keep the es5 version, need to remove all default property..
+7. At least get JSHint 💯
