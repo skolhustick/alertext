@@ -1,8 +1,8 @@
 (function(window) {
-  'use strict'
+  'use strict';
 
   function defineAlertext() {
-    var alertext = {}
+    var alertext = {};
     alertext.container = document.querySelector('.alertext-container');
     alertext.init = function() {
       var els = document.querySelectorAll('[alertext]');
@@ -21,8 +21,8 @@
             m = 1000;
           }
           alertext.alert(k, l, j, m);
-        }
-      })(i)
+        };
+      })(i);
     };
     alertext.alert = function(message, type="primary", options, delay="3000") {
       var el = document.createElement("div");
@@ -47,7 +47,7 @@
       }
       setTimeout(function(){
         alertext.container.removeChild(el);
-      }, delay)
+      }, delay);
       console.log(el);
     };
     return alertext;
