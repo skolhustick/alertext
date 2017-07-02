@@ -43,7 +43,6 @@
       setTimeout(function(){
         alertext.container.removeChild(el);
       }, delay)
-      // document.body.appendChild(el);
     };
     return alertext;
   }
