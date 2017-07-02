@@ -9,7 +9,8 @@ Alertext is a simple to use alert plugin written in Javascript. It has no depend
 Please include both alertext.js and alertext.css in your page before anything else.
 
 ```html
-<!-- Add alertext as data-attribute with the message to the HTML element of choice. This will bind the click event. -->
+<!-- Add alertext as data-attribute with the message to the HTML element of choice.
+This will bind the click event. -->
 <a alertext="Some primary information to notify">Some button</a><br>
 
 
@@ -28,7 +29,7 @@ Please include both alertext.js and alertext.css in your page before anything el
 
 ### HTML5 attribute
 ```html
-<a 
+<a
 alertext="Some primary information to notify"
 alertext-type="danger"
 alertext-options='{"color":"green","background":"orange"}'
@@ -46,6 +47,7 @@ Some button
 ```html
 <script>
   //alertext.alert(message, type, options(css), delay(before dissapear));
+
   alertext.alert("Launched programatically", "info", '{"color":"green","background":"orange"}', 10000);
 </script>
 ```
@@ -54,7 +56,9 @@ Some button
 
 ```html
 <script>
-  //You can skip parameters by just leaving them undefined. Below, is an example of type and delay skipped:
+  //You can skip parameters by just leaving them undefined.
+  //Below, is an example of type and delay skipped:
+
   alertext.alert("Launched programatically", undefined, '{"color":"green","background":"orange"}');
 </script>
 ```
@@ -91,3 +95,52 @@ alertext-type="danger">Danger</a><br>
   alertext.alert("Launched programatically", "danger");
 </script>
 ```
+
+## Setting default and overriding styles
+
+Alertext relies on a boilerplate CSS file for the most basic stylings.
+
+```css
+
+/*Edit this element*/
+.alertext {
+  padding: 20px 30px;
+  min-width: 250px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+/*Override these styles to change the style of the types*/
+.alertext-danger {
+  background: #FF3D00;
+  color: white;
+}
+
+.alertext-primary {
+  background: #0D47A1;
+  color: white;
+}
+
+.alertext-success {
+  background: #689F38;
+  color: white;
+}
+
+.alertext-warning {
+  background: #EF6C00;
+  color: white;
+}
+
+.alertext-info {
+  background: #2196F3;
+  color: white;
+}
+
+```
+Alternatively, you can simply pass an object (with JS CSS modifier syntax) when calling alertext.
+If via HTML5, use the alertext-options data attribute.
+If via JS, use the pass the options as the third parameter.
