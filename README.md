@@ -151,3 +151,4 @@ If via JS, use the pass the options as the third parameter.
 2. Add custom classes via parameter
 3. Need help to convert to full ES6 mode 😎
 4. Reduce variable names to decrease size, but keep a 'readable version' 🔦
+5. Add to readme how to use with animate CSS
